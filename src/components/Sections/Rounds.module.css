@@ -1,0 +1,59 @@
+.Round{
+
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.Heading{
+    display: flex;
+    flex-direction: column;
+   align-items: baseline;
+    padding-left: 4vw;
+}
+.main{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #0007BF 0%, #0071BC 100%);
+}
+
+.test{
+    background: yellow;
+}
+
+.list{
+    position: relative;
+    list-style-type:none ;
+    color: white;
+    padding-left: 5vw;
+}
+.list > li{
+    padding-bottom: 3vh;
+    
+}
+
+.letter{
+    height: 60vh;
+    width: 30vw;
+    background: rgba(245, 245, 245, 0.411);
+    border-left:1px solid black;
+    border-bottom:1px solid black;
+    border-top:1px solid black;
+}
+/*.connectLine {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    border: 1px solid red;
+    background: linear-gradient(to bottom right, transparent calc(50% - 1px),  black calc(50% - 1px), black 50%, transparent 50%);
+}*/
+
+.stopScroll {
+    
+    height: 100vh;
+    overflow: hidden;
+  }

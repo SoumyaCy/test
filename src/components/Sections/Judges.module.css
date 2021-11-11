@@ -1,0 +1,23 @@
+.Judges{
+    height: 100vh;
+    width: 100vw;
+}
+.Heading{
+    display: flex;
+    flex-direction: column;
+   align-items: baseline;
+    padding-left: 5vw;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.firstRow{
+    display: flex;
+  
+}
+.secondRow{
+    display: flex;
+}

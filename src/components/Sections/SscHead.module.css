@@ -1,0 +1,99 @@
+.sectionOne {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 0px;
+	position: relative;
+}
+@keyframes starMove {
+	0% {
+		left: 0px;
+	}
+	25% {
+		left: 10px;
+		opacity: 0.35;
+	}
+	50% {
+		left: 0px;
+		opacity: 0.25;
+	}
+	75% {
+		right: 10px;
+		opacity: 0.35;
+	}
+	100% {
+		left: 0px;
+		opacity: 0.25;
+	}
+}
+.sectionOne::before {
+	content: "";
+	background-image: url(./../../assets/stars.svg);
+	opacity: 0.25;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	animation: starMove 3s;
+	animation-iteration-count: infinite;
+}
+
+.child {
+	position: relative;
+}
+.img {
+	width: 600px;
+	height: 600px;
+}
+.texts {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.heading {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 50px;
+	margin: 0;
+}
+.tagline {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.btn {
+	width: 191px;
+	height: 56px;
+	border-radius: 13px;
+	margin: 20px 20px;
+}
+
+.reg {
+	background: linear-gradient(90deg, #0007bf 0%, #0071bc 97%);
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 30px;
+	margin: 0 auto;
+	color: #ffffff;
+}
+
+.collab {
+	border: 3px solid #0007bf;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 30px;
+	/* margin: 0 auto; */
+	color: #0007bf;
+}

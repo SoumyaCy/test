@@ -1,0 +1,7 @@
+.Roundno{
+    color: white;
+    
+}
+.Roundno >p{
+    word-wrap: break-word;
+}
