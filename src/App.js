@@ -22,7 +22,26 @@ function noScroll(){
 	 }
  }
 
+ function move1(event){
+	if(event.deltaY>0){
+		sec2();
+	}
+	else {}
+}
 
+function move2(event){
+	if(event.deltaY>0){
+		sec3();
+	}
+	else {sec1();}
+}
+
+function move4(event){
+	if(event.deltaY>0){
+		sec1();
+	}
+	else {sec3();}
+}
 
 function sec1(){
 		$('html, body').animate({
@@ -31,17 +50,20 @@ function sec1(){
 	}
 
 function sec2(){
+	
     $('html, body').animate({
         scrollTop: $("#s2").offset().top
     }, 1000);
 }
-function sec3(){
+function sec3(event){
+
     $('html, body').animate({
         scrollTop: $("#s3").offset().top
     }, 1000);
-	scrollLock.disablePageScroll("#s3");
-
+	scrollLock.disablePageScroll(document.getElementById("s3"));
 }
+
+
 function sec4(){
 	scrollLock.enablePageScroll();
 	setScroll(1);
@@ -54,17 +76,17 @@ function sec4(){
 
 	return (
 		<div className="App">
-		<section onWheel={sec2} id="s1">
+		<section onWheel={move1} id="s1">
 		<Navbar />
 			<SscHead />
 		</section>
-		<section onWheel={sec3} id="s2">
+		<section onWheel={move2} id="s2">
 		<SscInfo />			
 		</section>
 		<section onWheel={(scroll===4)?sec4:noScroll} id="s3">
 		<Round onWheel={noScroll}/>
 		</section>
-		<section onWheel={sec1} id="s4">
+		<section onWheel={move4} id="s4">
 		<Judges />
 		</section>
 			
