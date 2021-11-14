@@ -17,19 +17,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background: linear-gradient(180deg, #0007BF 0%, #0071BC 100%);
 }
 
-.test{
-    background: yellow;
+#test{
+    padding-top: 18vh;
 }
 
 .list{
     position: relative;
     list-style-type:none ;
     color: white;
-    padding-left: 5vw;
+    left:-8vw
 }
 .list > li{
     padding-bottom: 3vh;
