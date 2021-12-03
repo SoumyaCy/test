@@ -1,23 +1,30 @@
 .Judges{
     height: 100vh;
     width: 100vw;
+    background-color: #ffffff;
 }
 .Heading{
     display: flex;
     flex-direction: column;
    align-items: baseline;
     padding-left: 5vw;
+    
 }
 .cards{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    
+    
 }
 
 .firstRow{
     display: flex;
+    justify-content: space-around;
+    padding-bottom: 0.5vh;
   
 }
 .secondRow{
     display: flex;
+    justify-content: space-around
 }

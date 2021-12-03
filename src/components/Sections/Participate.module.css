@@ -1,0 +1,39 @@
+.participation{
+    height: 100vh;
+    width: 100vw;
+	padding-top: 1vh;
+	background-color: #fcfcfc;
+}
+
+.list {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.listItem {
+	list-style-type: none;
+	
+}
+.steps {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	margin-bottom: 40px;
+	margin: 0 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	border: 5px solid #0007bf;
+	color: #0007bf;
+	box-shadow: 0 0 3px #ccc;
+}
+.activeStep {
+	background-image: linear-gradient(90deg, #0007bf 0%, #0075ff 100%);
+	color: azure;
+	font-size: 17px;
+	padding: 3px;
+}

@@ -2,8 +2,9 @@
     position: relative;
     perspective: 600px;
  height: 39vh;
-width: 20vw;
+width: 24vw;
 border: 1px solid white;
+box-shadow: 0 0 3px rgb(168, 168, 168);
 
 }
 .card{  

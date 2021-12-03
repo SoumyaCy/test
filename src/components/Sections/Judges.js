@@ -14,14 +14,14 @@ function Judges(){
            <Card name="Name" info=" Lorem ipsum dolor sit amet,"></Card>
            <Card name="Name" info=" Lorem ipsum dolor sit amet,"></Card>
            <Card name="Name" info=" Lorem ipsum dolor sit amet,"></Card>
-           <Card name="Name" info=" Lorem ipsum dolor sit amet,"></Card>
+           
            </div>
            <div className={styles.secondRow}>
            <Card name="Name" info=" Lorem ipsum dolor sit amet,"></Card>
            <Card name="Name" info=" Lorem ipsum dolor sit amet,"></Card>
            <Card name="Name" info=" Lorem ipsum dolor sit amet,"></Card>
            <Card name="Name" info=" Lorem ipsum dolor sit amet,"></Card>
-           <Card name="Name" info=" Lorem ipsum dolor sit amet,"></Card>
+          
            </div>
        </div>
            

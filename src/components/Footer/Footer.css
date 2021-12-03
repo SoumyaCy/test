@@ -1,0 +1,65 @@
+.Section-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fcfcfc;
+
+}
+
+.logo{
+height: 20vh;
+width: 35vw;
+
+}
+.contact{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #414B61;
+    position: relative;
+    right: 16vw;
+}
+.contact li{
+    
+    position: relative;
+    left: 10vw;
+}
+.contact a{
+    font-weight: 400;
+    text-decoration: none; 
+    color: #007bff;
+}
+.contact a:hover{
+    color: rgb(0, 29, 158);
+}
+.phone{
+    position: relative;
+    left: -2.8vw;
+}
+.links{
+    position: relative;
+    right: 10vw;
+    list-style: none;
+}
+
+.links a{
+    font-size: 1.2rem;
+        color: #007bff;
+    text-decoration: none;
+}
+.links a:hover{
+    color: rgb(17, 0, 255);
+}
+
+
+.Section-2{
+   height: 8vh;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+    background-color: #0F2C67;
+    color: rgb(216, 223, 230);
+}
+.next-c{
+    position: relative;
+    left: 10vw;
+}

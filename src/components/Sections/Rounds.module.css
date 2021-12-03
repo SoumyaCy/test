@@ -1,7 +1,11 @@
 .Round{
-
+    background-color: #ffffff;
     width: 100vw;
     height: 100vh;
+     margin:0 auto;
+     padding: 0 2vw;
+     
+
     
 }
 
@@ -35,22 +39,22 @@
     padding-bottom: 3vh;
     
 }
-
+.roundinf{
+    position: relative;
+    right: 8vw;
+}
 .letter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 60vh;
-    width: 30vw;
-    background: rgba(245, 245, 245, 0.411);
+    width: 40vw;
+    background: rgba(245, 245, 245, 0.315);
     border-left:1px solid black;
     border-bottom:1px solid black;
     border-top:1px solid black;
 }
-/*.connectLine {
-    position: relative;
-    width: 100px;
-    height: 200px;
-    border: 1px solid red;
-    background: linear-gradient(to bottom right, transparent calc(50% - 1px),  black calc(50% - 1px), black 50%, transparent 50%);
-}*/
+
 
 .stopScroll {
     

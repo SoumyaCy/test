@@ -10,25 +10,47 @@ function Round (){
     let [scroll,changeScroll]=useState(1);
     let rockRef=useRef();
 
+    function sec2(){
+        scrollLock.enablePageScroll();
+        $('html, body').animate({
+            scrollTop: $("#s2").offset().top
+        }, 1000);
+    }
+    function sec4(){
+        scrollLock.enablePageScroll();
+        $('html, body').animate({
+            scrollTop: $("#s4").offset().top
+        }, 1000);
+    }
 
-useEffect(()=>{
-    if(scrollLock===2){
-    scrollLock.toggle();}
-    else if(scrollLock===4){
-    scrollLock.toggle();}
-},scroll)
 
+function secLock(event){
 
-   function noScroll(){
-      
+    $('html, body').animate({
+        scrollTop: $("#s3").offset().top
+    }, 1000);
+    if(scroll==1){
+        console.log("lock")}
+	scrollLock.disablePageScroll(document.getElementById("Rounds"));
+}
+ 
+
+    
+
+   function noScroll(event){
+      console.log(event)
        if(scroll<4){
         changeScroll(scroll+1);
    
 }
         else {
-            
+            scrollLock.enablePageScroll();
+             
             changeScroll(1) ;
-            
+            if(event.deltaY>0){
+            sec4();}
+            else{
+            sec2()}
         }
 
     }
@@ -59,9 +81,11 @@ useEffect(()=>{
         }
         
     }
-    
+    function move(event) {   
+moveRocket();
+noScroll(event);
 
-
+}
 
 
  
@@ -69,14 +93,14 @@ useEffect(()=>{
    
 
 
-    return <div id="Rounds"  onWheel={noScroll} className={styles.Round}>
+    return <div id="Rounds"  onWheel={(scroll==2)?secLock:null}  className={styles.Round}>
 
        <div className={styles.Heading}>
            <h1>How it works</h1>
            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Nam convallis ornare vestibulum. Integer sed aliquet it</p>
        </div>
 
-     <div className={styles.main} onWheel={moveRocket}>
+     <div className={styles.main} onWheel={move}>
      <div  id={styles.test} ref={rockRef}><Rocket /> </div>
     <ul className={styles.list}>
         <li style={{textShadow:(scroll===4?"1px 1px 10px #fff, 1px 1px 10px #ccc":null)}}>Round 4</li>
@@ -84,12 +108,11 @@ useEffect(()=>{
         <li style={{textShadow:(scroll===2?"1px 1px 10px #fff, 1px 1px 10px #ccc":null)}}>Round 2</li>
         <li style={{textShadow:(scroll===1?"1px 1px 10px #fff, 1px 1px 10px #ccc":null)}}>Round 1</li>   
     </ul>
-       <div>
+       <div className={styles.roundinf}>
            <Roundno no={scroll} detail="This is how it goes, blah blah blah" />
        </div>
        <div className={styles.letter}>
-
-       <div className={styles.connectLine} ></div>
+ 
        </div>
        
        </div>  

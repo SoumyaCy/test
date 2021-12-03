@@ -3,11 +3,10 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 20px 30px;
-	border-width: 5px;
-	border-style: solid;
-	border-radius: 50px;
-	border-image: linear-gradient(#0007bf 0%, #0071bc 97%);
-	border-image-slice: 1;
+	background-color: #ffffff;
+	
+
+
 }
 
 .links {
@@ -35,16 +34,16 @@
 .navLink::after {
 	content: "";
 	height: 2px;
-	width: 20%;
+	width: 30%;
 	background-color: #000000;
 	position: absolute;
-	left: calc(50% - 10%);
+	left: calc(50% - 11%);
 	bottom: 0;
 }
 
 @keyframes grow {
 	from {
-		width: 20%;
+		width: 30%;
 		left: calc(50% - 10%);
 	}
 	to {

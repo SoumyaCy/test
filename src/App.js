@@ -4,9 +4,13 @@ import SscHead from "./components/Sections/SscHead";
 import SscInfo from "./components/Sections/SscInfo";
 import Judges from "./components/Sections/Judges";
 import Round from "./components/Sections/Rounds";
+import Participate from "./components/Sections/Participate";
+import Footer from "./components/Footer/Footer";
 import React, {useState,useEffect} from "react";
+import ParticleBack from "./components/Particleback";
 import scrollLock, { disablePageScroll, enablePageScroll } from 'scroll-lock';
 import $ from "jquery";
+
 
 function App() {
 let [scroll,setScroll]=useState(1);
@@ -23,6 +27,7 @@ function noScroll(){
  }
 
  function move1(event){
+	 console.log(event.deltaY);
 	if(event.deltaY>0){
 		sec2();
 	}
@@ -30,17 +35,30 @@ function noScroll(){
 }
 
 function move2(event){
+	
 	if(event.deltaY>0){
 		sec3();
 	}
 	else {sec1();}
 }
-
+function move3(event){
+	if(event.deltaY>0){
+		sec4();
+	}
+	else {sec2();}
+}
 function move4(event){
+	if(event.deltaY>0){
+		sec5();
+	}
+	else {sec3();}
+}
+
+function move5(event){
 	if(event.deltaY>0){
 		sec1();
 	}
-	else {sec3();}
+	else {sec4();}
 }
 
 function sec1(){
@@ -50,7 +68,7 @@ function sec1(){
 	}
 
 function sec2(){
-	
+	scrollLock.enablePageScroll();
     $('html, body').animate({
         scrollTop: $("#s2").offset().top
     }, 1000);
@@ -72,22 +90,36 @@ function sec4(){
     }, 1000);
 }
  
+function sec5(){
+
+    $('html, body').animate({
+        scrollTop: $("#s5").offset().top
+    }, 1000);
+}
 
 
 	return (
 		<div className="App">
-		<section onWheel={move1} id="s1">
+		<section  id="s1">
 		<Navbar />
+		<ParticleBack></ParticleBack>
 			<SscHead />
+			
 		</section>
-		<section onWheel={move2} id="s2">
+		<section  id="s2">
 		<SscInfo />			
 		</section>
-		<section onWheel={(scroll===4)?sec4:noScroll} id="s3">
-		<Round onWheel={noScroll}/>
+		<section id="s3">
+		<Round />
 		</section>
-		<section onWheel={move4} id="s4">
+		<section  id="s4">
+		<Participate />
+		</section>
+		<section id="s5">
 		<Judges />
+		</section>
+		<section id="s6">
+		<Footer />
 		</section>
 			
 

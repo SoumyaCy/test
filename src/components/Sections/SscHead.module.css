@@ -3,6 +3,7 @@
 	justify-content: space-around;
 	padding: 20px 0px;
 	position: relative;
+	
 }
 @keyframes starMove {
 	0% {
@@ -27,7 +28,7 @@
 }
 .sectionOne::before {
 	content: "";
-	background-image: url(./../../assets/stars.svg);
+	
 	opacity: 0.25;
 	background-size: cover;
 	position: absolute;
@@ -80,9 +81,13 @@
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
-	line-height: 30px;
+	border: none;
 	margin: 0 auto;
 	color: #ffffff;
+	
+}
+.reg:hover{
+	background: linear-gradient(90deg, #050a8d 0%, #015e9c 97%);
 }
 
 .collab {
@@ -96,4 +101,9 @@
 	line-height: 30px;
 	/* margin: 0 auto; */
 	color: #0007bf;
+}
+
+.collab:hover{
+	background-color: rgb(21, 21, 255);
+	color: white;
 }

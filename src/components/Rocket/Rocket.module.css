@@ -2,3 +2,19 @@
     position: relative;
     
     }
+.Rock{
+    animation: rocket 0.1s ease infinite;
+
+    @keyframes rocket
+     {
+        0%,100%
+        {
+            transform: translateY(-1px)
+        }
+        50%
+        {
+            transform: translateY(1px)
+        }
+        
+    }
+}

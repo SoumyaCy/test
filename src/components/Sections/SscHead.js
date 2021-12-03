@@ -1,10 +1,14 @@
 import React from "react";
 import styles from "./SscHead.module.css";
-import sscimg from "./../../assets/ssclogo.png";
+import sscimg from "./../../assets/newLogo.png";
+
 
 const SscHead = () => {
 	return (
+	
+	
 		<div className={styles.sectionOne}>
+        
 			<div className={styles.child}>
 				<img
 					className={styles.img}
@@ -27,6 +31,7 @@ const SscHead = () => {
 				</div>
 			</div>
 		</div>
+		
 	);
 };
 
